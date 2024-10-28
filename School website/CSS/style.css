@@ -1,0 +1,200 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    /*your can change the color of the nav background*/
+    background-color: black;
+    padding: 20px;
+    margin: 0 0 0 auto;
+}
+nav ul li{
+    margin-right: 60px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+/*hero section*/
+.hero-image{
+background-image: url("https://cdn.pixabay.com/photo/2021/04/28/09/44/book-6213537_640.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+.hero-text{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+}
+.hero-text h1{
+    font-size: 48px;
+    margin: 0;
+}
+.hero-text p{
+    font-size: 22px;
+}
+#reg-button{
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+/*School facilities*/
+.gallery{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.gallery img{
+    width: 30%;
+    border-radius: 8px;
+    height: 35vh;
+}
+/*Form styles*/
+.main-container{
+    display: flex;
+    padding: 30px;
+    gap: 130px;
+}
+.form-container{
+    width: 470px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+.form-group label{
+    display: block;
+    font-weight: 400;
+    color: #666;
+}
+.form-group input,
+.form-group select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.form-group button{
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 450;
+    cursor: pointer;
+}
+.radio-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+/*table styles starts here*/
+.table-container{
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f0f0f0f0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+table{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid black;
+}
+th, td{
+    padding: 12px;
+    text-align: left;
+}
+
+/*Gallery styles starts here*/
+h1{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery-item{
+    width: 350px;
+    padding: 15px 15px;
+    margin-bottom: 8px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0,0, 0.3);
+}
+.gallery-item iframe{
+    width: 100%;
+    height: 200px;
+}
+
+/*Contact styling*/
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-details{
+    background-color: #666666;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+.contact-details h2{
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    color: #f0f0f0;
+}
+.contact-details p{
+    margin: 5px 0;
+    font-family: Arial, sans-serif;
+}
+iframe{
+    width: 100%;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 10px;
+}
+

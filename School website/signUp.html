@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+  <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+<ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+    <li><a href="">Gallery</a></li>
+    <li><a href="">Sign Up</a></li>
+</ul>
+    </nav>
+</header>
+
+<div class="main-container">
+  <div class="form-container">
+    <h2>Register Form </h2>
+    <form action="">
+<!--      name section-->
+<div class="form-group">
+  <label for="name"><i class="fa fa-user" aria-hidden="true"></i>Your Name:</label>
+  <input type="text" id="name" name="name" required>
+</div>
+<!--      email section-->
+      <div class="form-group">
+        <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+<!--      button section-->
+      <div class="form-group">
+        <label for="password"><i class="fa fa-unlock-alt" aria-hidden="true"></i>Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <!--    confirm password section-->
+    <div class="form-group">
+      <label for="confirm-password"><i class="fa fa-unlock-alt" aria-hidden="true"></i>Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password">
+    </div>
+<!--      gender section-->
+      <div class="form-group">
+        <label><i class="fa fa-venus" aria-hidden="true"></i>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male">Male</label>
+          <label><input type="radio" name="gender" value="female">Female</label>
+          <label><input type="radio" name="gender" value="other">Other</label>
+
+        </div>
+      </div>
+<!--      dropdown selection-->
+      <div class="form-group">
+        <label for="county">County:</label>
+        <select name="county" id="county">
+          <option value="" disabled selected>Select your county</option>
+          <option value="Nairobi">Nairobi</option>
+          <option value="Mombasa">Mombasa</option>
+          <option value="Kisumu">Kisumu</option>
+          <option value="Nakuru">Nakuru</option>
+        </select>
+      </div>
+<!--      submit button section-->
+      <div class="form-group">
+        <button type="submit"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</button>
+      </div>
+    </form>
+  </div>
+<!--  table starts here-->
+<div class="table-container">
+  <h2>Table With Users Registered</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>County</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Cyrus Maundu</td>
+      <td>maundu@gmail.com</td>
+      <td>Male</td>
+      <td>Kisumu</td>
+    </tr>
+
+        <tr>
+      <td>Esther Mumbi</td>
+      <td>esthermumbi@gmail.com</td>
+      <td>Female</td>
+      <td>Mombasa</td>
+    </tr>
+
+            <tr>
+      <td>Nicole Ombok</td>
+      <td>nicole33@gmail.com</td>
+      <td>Female</td>
+      <td>Nakuru</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</body>
+</html>
