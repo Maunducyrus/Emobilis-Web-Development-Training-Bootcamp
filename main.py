@@ -48,3 +48,51 @@ class Rectangle:
         print(f"perimeter: {self.perimeter()}")
         print(f"Area: {self.area()}")
 
+class Employee:
+    def __init__(self, name, age, salary, gender):
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.gender = gender
+
+    def display_name(self):
+        return f"{self.name} is {self.age} years old"
+
+class Manager(Employee):
+    def __init__(self, name, age, salary, gender, education_level):
+        super().__init__(name, age, salary, gender)
+        self.education_level = education_level
+
+class Developer(Employee):
+    def __init__(self, name, age, salary, gender, prog_language):
+        super().__init__(name, age, salary, gender)
+        self.prog_language = prog_language
+
+class SalaryEmployee(Employee):
+    def __init__(self, name, age, salary, gender, monthly_salary):
+        super().__init__(name, age, salary, gender)
+        self.monthly_salary = monthly_salary
+
+    def calculate_salary(self):
+        return self.monthly_salary + self.salary
+
+class HoursEmployee(Employee):
+    def __init__(self, name, age, salary, gender, hours_worked, hourly_rate):
+        super().__init__(name, age, salary, gender)
+        self.hours_worked = hours_worked
+        self.hourly_rate = hourly_rate
+
+    def calculate_payment(self):
+        return (self.hourly_rate * self.hours_worked) + self.salary
+
+class commissionEmployee(SalaryEmployee):
+    def __init__(self, name, age, salary, gender, monthly_salary, commission):
+        super().__init__(name, age, salary, gender, monthly_salary)
+        self.commission = commission
+
+        def calculate_payroll(self):
+            fixed = super().calculate_salary()
+            return fixed + self.commission
+
+
+
