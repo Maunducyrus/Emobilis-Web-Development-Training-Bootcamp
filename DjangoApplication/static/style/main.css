@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Carousel Styles */
+.carousel {
+    margin: 20px 0;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.carousel-caption p {
+    color: #eee;
+    font-size: 1em;
+    opacity: 0.85;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+.jumbotron h1 {
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.jumbotron p.lead {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.jumbotron p,
+.jumbotron hr {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Button */
+.jumbotron .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+/* Paragraphs */
+p {
+    margin: 1em 0;
+    font-size: 1em;
+    color: #444;
+    max-width: 80%;
+    line-height: 1.7;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-center {
+    text-align: center;
+}
+
+.btn-primary {
+    display: inline-block;
+}
+
+
+/* About Section */
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-container h1 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.about-container p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.features h2 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Custom checkmark icon for list items */
+.features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-indicators button {
+    background-color: #007bff;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+    flex-wrap: wrap;
+    background-color: #666666;
+}
+
+.hero-1 {
+  flex: 1;
+}
+
+.hero-2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-2 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+
