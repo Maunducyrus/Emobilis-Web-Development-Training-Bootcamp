@@ -1,22 +1,21 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% load static %}
+
+
 
 {% block title%}
 
 About
 
 {% endblock %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Tech Haven Electronics</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
-</head>
-<body>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
 
 <div class="container">
     <h1>About Us</h1>
@@ -35,9 +34,40 @@ About
     </div>
 </div>
 
-</body>
-</html>
 
+
+<h3>Student List</h3>
+<table class="table">
+<thead>
+<tr>
+    <th>PHOTO</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>GENDER</th>
+    <th>COURSE</th>
+    <th></th>
+</tr>
+</thead>
+    <tbody>
+    {% for student in data %}
+
+    <tr>
+        <td>
+            {% if student.image %}
+                    <img src="{{ student.image.url }}" alt="{{ student.name }}" style="height: 80px; width: 80px">
+            {% else %}
+                    <img src="{% static 'images/avatar.jpg' %}" alt="No image" style="height: 80px; width: 80px">
+            {% endif %}
+        </td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.gender }}</td>
+        <td>{{ student.course }}</td>
+        <td><a href="{% url 'edit' student.id %}" class="btn btn-success" type="button">EDIT STUDENT</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}
 
