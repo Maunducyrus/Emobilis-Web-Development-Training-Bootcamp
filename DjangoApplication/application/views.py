@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
+from django.template.context_processors import request
 
 from application.forms import StudentForm
 from application.models import Student
@@ -38,5 +39,17 @@ def edit(request, id):
     else:
         form = StudentForm(instance=student)
     return render(request, 'edit.html', {'form': form, 'student': student})
+
+def delete(request,id):
+    student = get_object_or_404(Student, id=id)
+
+    try:
+        student.delete()
+        messages.success(request, 'Student successsfully deleted')
+
+    except Exception as e:
+        messages.error(request, 'Student not deleted')
+
+    return redirect('about')
 
 
