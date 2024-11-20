@@ -1,9 +1,14 @@
 from django.contrib import messages
+from django.core.serializers import serialize
+from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.template.context_processors import request
+from rest_framework import status
+from rest_framework.decorators import api_view
 
 from application.forms import StudentForm
-from application.models import Student
+from application.models import Student, Course
+from application.serializers import StudentSerializer, CourseSerializer
 
 
 # Create your views here.
@@ -52,4 +57,28 @@ def delete(request,id):
 
     return redirect('about')
 
+@api_view(['GET', 'POST'])
+def studentsapi(request):
+    if request.method == 'GET':
+        students = Student.objects.all()
+        serializer = StudentSerializer(students, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        serializer = StudentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+@api_view(['GET', 'POST'])
+def coursesapi(request):
+    if request.method == 'GET':
+        courses = Student.objects.values_list('course', flat=True).distinct()
+        return JsonResponse({'courses': list(courses)}, safe=False)
+    elif request.method == 'POST':
+        serializer = CourseSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

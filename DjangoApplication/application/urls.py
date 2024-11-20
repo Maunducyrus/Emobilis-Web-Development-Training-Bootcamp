@@ -27,6 +27,8 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('edit/<int:id>/',views.edit, name='edit'),
-    path('delete/<int:id>/',views.delete, name="delete")
+    path('delete/<int:id>/',views.delete, name="delete"),
+    path('studentapi/', views.studentsapi, name="studentsapi"),
+    path('coursesapi/', views.coursesapi, name="coursesapi"),
 
 ]
