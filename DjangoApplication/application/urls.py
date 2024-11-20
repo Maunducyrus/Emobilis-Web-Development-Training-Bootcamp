@@ -30,5 +30,6 @@ urlpatterns = [
     path('delete/<int:id>/',views.delete, name="delete"),
     path('studentapi/', views.studentsapi, name="studentsapi"),
     path('coursesapi/', views.coursesapi, name="coursesapi"),
+    path('mpesaapi/', views.mpesaapi, name='mpesaapi')
 
 ]
